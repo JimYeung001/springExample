@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS `contact_msg` (
 );
 
 create table if not exists `holidays`(
-    `day` varchar(20) not null,
+    `holiday` varchar(20) not null,
     `reason` varchar(100) not null,
     `type` varchar(20) not null,
     `created_at` TIMESTAMP NOT NULL,
     `created_by` varchar(50) NOT NULL,
     `updated_at` TIMESTAMP default null,
-    `updated_by` varchar(50) default null
+    `updated_By` varchar(50) default null
 );
