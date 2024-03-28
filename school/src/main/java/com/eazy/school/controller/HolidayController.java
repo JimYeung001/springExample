@@ -25,16 +25,6 @@ public class HolidayController {
                                   Model model) {
         model.addAttribute("festival", festival);
         model.addAttribute("federal", federal);
-//        List<Holiday> holidays = Arrays.asList(
-//                new Holiday(" Jan 1 ", "New Year's Day", Holiday.Type.FESTIVAL),
-//                new Holiday(" Oct 31 ", "Halloween", Holiday.Type.FESTIVAL),
-//                new Holiday(" Nov 24 ", "Thanksgiving Day", Holiday.Type.FESTIVAL),
-//                new Holiday(" Dec 25 ", "Chrismas", Holiday.Type.FESTIVAL),
-//                new Holiday(" Jan 17 ", "Martin Luther King Jr. Day", Holiday.Type.FEDERAL),
-//                new Holiday(" Jul 4 ", "Independence Day", Holiday.Type.FEDERAL),
-//                new Holiday(" Sep 5 ", "Labor Day", Holiday.Type.FEDERAL),
-//                new Holiday(" Nov 11 ", "Veterans Day", Holiday.Type.FEDERAL)
-//        );
         Iterable<Holiday> all = holidaysRepository.findAll();
         List<Holiday> holidays = StreamSupport.stream(all.spliterator(), false).toList();
         Holiday.Type[] types = Holiday.Type.values();
